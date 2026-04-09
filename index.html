@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AURA — Anti-Gravity Fashion</title>
+    <meta name="description"
+        content="AURA redefines fashion with an ethereal, weightless aesthetic. Discover premium collections that defy gravity." />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-ring"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="nav-logo"><span>A</span>URA</a>
+        <ul class="nav-links">
+            <li><a href="#categories">Collections</a></li>
+            <li><a href="#featured">New In</a></li>
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#newsletter">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+            <!-- Search icon -->
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <!-- User icon -->
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+            </svg>
+            <!-- Cart icon -->
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 01-8 0" />
+            </svg>
+        </div>
+        <div class="nav-hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#categories" onclick="closeMobileMenu()">Collections</a>
+        <a href="#featured" onclick="closeMobileMenu()">New In</a>
+        <a href="#story" onclick="closeMobileMenu()">Our Story</a>
+        <a href="#newsletter" onclick="closeMobileMenu()">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero parallax-section" id="hero">
+        <!-- Floating particles -->
+        <div class="hero-bg-particles" id="heroParticles"></div>
+
+        <!-- Decorative shapes -->
+        <div class="hero-shape hero-shape-1" data-parallax="0.05"></div>
+        <div class="hero-shape hero-shape-2" data-parallax="0.08"></div>
+        <div class="hero-shape hero-shape-3" data-parallax="0.12"></div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-eyebrow">Spring / Summer 2026</p>
+                <h1 class="hero-title">Defy<br />Gravi<em>ty</em></h1>
+                <p class="hero-subtitle">
+                    Experience fashion that transcends the ordinary. Where ethereal elegance meets weightless design —
+                    every piece is crafted to make you feel like you're floating.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn-3d" id="cta-explore">
+                        Explore Collection
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </button>
+                    <button class="btn-outline" id="cta-lookbook">View Lookbook</button>
+                </div>
+            </div>
+
+            <div class="hero-image-wrapper">
+                <div class="hero-image-container" data-parallax="0.03">
+                    <img src="hero_model.png" alt="Fashion model in elegant floating silver gown" class="hero-image" />
+                    <div class="hero-image-glow"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Marquee / Brand Strip -->
+    <section class="marquee-section">
+        <div class="marquee-track">
+            <span>Ethereal</span>
+            <span>Weightless</span>
+            <span>Luminous</span>
+            <span>Timeless</span>
+            <span>Effortless</span>
+            <span>Celestial</span>
+            <span>Ethereal</span>
+            <span>Weightless</span>
+            <span>Luminous</span>
+            <span>Timeless</span>
+            <span>Effortless</span>
+            <span>Celestial</span>
+        </div>
+    </section>
+
+    <!-- Categories Section (Asymmetric Layout) -->
+    <section class="categories parallax-section" id="categories">
+        <div class="section-header reveal">
+            <p class="section-eyebrow">Curated For You</p>
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="categories-grid">
+            <!-- Large card -->
+            <div class="category-card reveal" data-parallax="0.02">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=900&h=1100&fit=crop&q=80"
+                    alt="Women's dresses collection" class="category-img" />
+                <div class="category-overlay">
+                    <h3 class="category-name">Dresses</h3>
+                    <p class="category-count">128 Pieces</p>
+                </div>
+                <div class="category-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7" />
+                        <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Right top card -->
+            <div class="category-card reveal reveal-delay-1" data-parallax="0.04">
+                <img src="https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=600&h=600&fit=crop&q=80"
+                    alt="Luxury accessories" class="category-img" />
+                <div class="category-overlay">
+                    <h3 class="category-name">Accessories</h3>
+                    <p class="category-count">86 Pieces</p>
+                </div>
+                <div class="category-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7" />
+                        <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Right bottom card -->
+            <div class="category-card reveal reveal-delay-2" data-parallax="0.06">
+                <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&h=600&fit=crop&q=80"
+                    alt="Designer shoes" class="category-img" />
+                <div class="category-overlay">
+                    <h3 class="category-name">Shoes</h3>
+                    <p class="category-count">64 Pieces</p>
+                </div>
+                <div class="category-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7" />
+                        <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured parallax-section" id="featured">
+        <div class="featured-bg-text" data-parallax="0.15">AURA</div>
+        <div class="featured-inner">
+            <div class="section-header reveal">
+                <p class="section-eyebrow">Just Arrived</p>
+                <h2 class="section-title">Featured Pieces</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <article class="product-card reveal reveal-delay-1">
+                    <div class="product-card-img">
+                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=500&h=667&fit=crop&q=80"
+                            alt="Silk Ivory Gown" loading="lazy" />
+                        <span class="product-badge">New</span>
+                        <div class="product-wishlist" aria-label="Add to wishlist">
+                            <svg viewBox="0 0 24 24" stroke-width="1.5">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Silk Ivory Gown</h3>
+                        <p class="product-category-label">Dresses</p>
+                        <p class="product-price">Rp 4.500.000</p>
+                    </div>
+                </article>
+
+                <!-- Product 2 -->
+                <article class="product-card reveal reveal-delay-2">
+                    <div class="product-card-img">
+                        <img src="https://images.unsplash.com/photo-1551803091-e20673f15770?w=500&h=667&fit=crop&q=80"
+                            alt="Pearl Draped Blazer" loading="lazy" />
+                        <div class="product-wishlist" aria-label="Add to wishlist">
+                            <svg viewBox="0 0 24 24" stroke-width="1.5">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Pearl Draped Blazer</h3>
+                        <p class="product-category-label">Outerwear</p>
+                        <p class="product-price">Rp 3.200.000</p>
+                    </div>
+                </article>
+
+                <!-- Product 3 -->
+                <article class="product-card reveal reveal-delay-3">
+                    <div class="product-card-img">
+                        <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=500&h=667&fit=crop&q=80"
+                            alt="Silver Metallic Top" loading="lazy" />
+                        <span class="product-badge">Best Seller</span>
+                        <div class="product-wishlist" aria-label="Add to wishlist">
+                            <svg viewBox="0 0 24 24" stroke-width="1.5">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Silver Metallic Top</h3>
+                        <p class="product-category-label">Tops</p>
+                        <p class="product-price">Rp 1.850.000 <span class="old-price">Rp 2.400.000</span></p>
+                    </div>
+                </article>
+
+                <!-- Product 4 -->
+                <article class="product-card reveal reveal-delay-4">
+                    <div class="product-card-img">
+                        <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=500&h=667&fit=crop&q=80"
+                            alt="Celestial Midi Skirt" loading="lazy" />
+                        <div class="product-wishlist" aria-label="Add to wishlist">
+                            <svg viewBox="0 0 24 24" stroke-width="1.5">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Celestial Midi Skirt</h3>
+                        <p class="product-category-label">Skirts</p>
+                        <p class="product-price">Rp 2.100.000</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story / About Section -->
+    <section class="story parallax-section" id="story">
+        <div class="story-visual reveal">
+            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=700&h=875&fit=crop&q=80"
+                alt="Fashion atelier" class="story-image-main" />
+            <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=400&h=400&fit=crop&q=80"
+                alt="Designer crafting" class="story-image-float" data-parallax="0.06" />
+        </div>
+
+        <div class="story-content reveal reveal-delay-2">
+            <p class="section-eyebrow">Our Story</p>
+            <h2 class="section-title">Crafted with<br />Intention</h2>
+            <p class="story-text">
+                Born from the idea that fashion should feel weightless, AURA creates garments that defy convention. Each
+                piece is meticulously crafted using sustainably sourced materials, designed to move with you — not
+                against you.
+            </p>
+            <p class="story-text">
+                Our atelier blends traditional craftsmanship with modern innovation, resulting in collections that feel
+                both timeless and futuristic. We believe fashion should elevate — literally and figuratively.
+            </p>
+
+            <button class="btn-3d" id="cta-about">
+                Learn More
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                </svg>
+            </button>
+
+            <div class="story-stats">
+                <div class="stat-item">
+                    <p class="stat-number" data-count="12">0</p>
+                    <p class="stat-label">Years of Craft</p>
+                </div>
+                <div class="stat-item">
+                    <p class="stat-number" data-count="48">0</p>
+                    <p class="stat-label">Countries</p>
+                </div>
+                <div class="stat-item">
+                    <p class="stat-number" data-count="200">0</p>
+                    <p class="stat-label">Collections</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter" id="newsletter">
+        <div class="newsletter-bg-shape"></div>
+        <div class="newsletter-bg-shape"></div>
+
+        <div class="reveal">
+            <p class="section-eyebrow">Stay Connected</p>
+            <h2 class="section-title">Join the Aura Universe</h2>
+            <p class="newsletter-text">
+                Be the first to receive exclusive access to new collections, private events, and members-only offers.
+            </p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" class="newsletter-input" placeholder="Enter your email address" required
+                    aria-label="Email address" id="newsletter-email" />
+                <button type="submit" class="newsletter-btn" id="newsletter-submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="nav-logo"><span>A</span>URA</a>
+                <p>Redefining fashion with ethereal elegance and weightless design. Every piece is crafted to make you
+                    feel extraordinary.</p>
+                <div class="footer-socials">
+                    <a href="#" class="footer-social-link" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="footer-social-link" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="footer-social-link" aria-label="Pinterest">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <a href="#">New Arrivals</a>
+                <a href="#">Dresses</a>
+                <a href="#">Outerwear</a>
+                <a href="#">Accessories</a>
+                <a href="#">Sale</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="#">Our Story</a>
+                <a href="#">Sustainability</a>
+                <a href="#">Careers</a>
+                <a href="#">Press</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Help</h4>
+                <a href="#">Contact Us</a>
+                <a href="#">Shipping & Returns</a>
+                <a href="#">FAQ</a>
+                <a href="#">Size Guide</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 AURA. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
